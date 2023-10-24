@@ -25,9 +25,7 @@ function App() {
   return (
     <div>
       <h1>My Todo List</h1>
-      {todos.map((todo) => {
-        return (<p key={todo.id}>{todo.title}</p>)
-      })}
+      
     </div>
   )
 }
