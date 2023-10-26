@@ -1,5 +1,6 @@
-import './App.css'
+// import './App.css'
 import React, { useState } from 'react'
+import Todos from './components/Todos'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -23,13 +24,21 @@ function App() {
   console.log(todos)
 
   return (
-    <div>
-      <h1>My Todo List</h1>
-      {todos.map((todo) => {
-        return <p key = {todo.id}>{todo.title}</p>
-      })}
+    <div style={styles.container}>
+      <h1 style = {styles.title}>My Todo List</h1>
+      <Todos todos = {todos} />
     </div>
   )
+}
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  },
+  title: {
+    fontSize: '36px',
+  },
 }
 
 export default App;

@@ -3,12 +3,19 @@ import TodoItem from '../components/TodoItem'
 
 const Todos = ({ todos }) => {
   return (
-    <div>
+    <div style={styles.container}>
       {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
+        return <TodoItem key={todo.id} todo={todo} />
       })}
     </div>
   )
 }
 
-export default Todos
+const styles = {
+  container: {
+    width: '40%',
+    margin: '0 auto',
+  },
+}
+
+export default Todos;
