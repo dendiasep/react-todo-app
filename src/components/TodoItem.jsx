@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TodoContext } from "../App"
 
-const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
+const TodoItem = ({ todo }) => {
+  // Peroleh "toggleCompleted" dan "deleteTodo" dari TodoContext
+  const { toggleCompleted, deleteTodo } = useContext(TodoContext)
 //merubah cara dengan mendefinisikan function untuk merubah css
   const getTodoItemStyle = () => {
     return {
